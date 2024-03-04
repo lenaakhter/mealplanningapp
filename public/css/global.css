@@ -1,6 +1,64 @@
-h1 {
-    color: aqua;
+*{
+    margin: 0;
+    font-family: "Actor", sans-serif;
 }
 
-/* Welcome */
+/* -------------------- navbar -------------------- */
 
+.calfoodieTitle{
+    background-color: #7BB599;
+    padding: 10px 0px;
+}
+
+.calfoodieTitle h1{
+    font-family: "Jomhuria", serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+    font-size: 70px;
+    color: #f2f2f2;
+}
+
+.navbarlinks {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 25px;
+    grid-row-gap: 0px;
+    background-color: #7BB599;
+    text-align: center;
+    padding-bottom: 15px;
+    }
+
+.navbarlinks a{
+    text-decoration: none;
+    font-size: 15px;
+    color: #f2f2f2;
+    font-weight: 600;
+    letter-spacing: .02cm;
+}    
+
+.navbarlinks a:hover {
+    color:#EDD7B7;
+    transition: .5ms;
+}
+
+.home nav{
+    grid-area: 1 / 1 / 2 / 2; 
+}
+
+.recipesnav{
+    grid-area: 1 / 2 / 2 / 3; 
+}
+
+.mealplannav{
+    grid-area: 1 / 3 / 2 / 4; 
+}
+
+.mindnav{
+    grid-area: 1 / 4 / 2 / 5; 
+}
+
+.regnav{
+    grid-area: 1 / 5 / 2 / 6; 
+}
