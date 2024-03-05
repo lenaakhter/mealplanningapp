@@ -45,6 +45,49 @@
 
     <footer>
 
+        <div class="foot">
+            <div class="footertitle">
+                <h1>calfoodie</h1>
+            </div>
+            <div class="footerlinks">
+
+                <div class="footerhome">
+                    <div class="footitle">
+                         
+                    </div>
+                    <div class="footlinks">
+                        
+                    <a href="/" id="footlinkh">Home</a>
+                    </div>
+                </div>
+                <div class="footerservices">
+                    <div class="foottitle">
+                        <h2>Services</h2>
+                    </div>
+                    <div class="footlinks">
+                        <a href="/recipes" id="footlink">Recipes</a>
+                        <a href="/mealplan" id="footlink">My Meal Plan</a>
+                    </div>
+                </div>
+                <div class="footermhl">
+                    <div class="foottitle">
+                        <h2>Mental Health Links</h2>
+                    </div>
+                    <div class="footlinks">
+                        <a href="/" id="footlink">placeholder</a>
+                        <a href="/" id="footlink">placeholder</a> 
+                    </div>
+
+                </div>
+                <div class="footerconnect">
+                    <div class="foottitle">
+                        <h2>Connect with us</h2>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
     </footer>
 
 </html>

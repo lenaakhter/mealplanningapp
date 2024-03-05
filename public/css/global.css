@@ -62,3 +62,94 @@
 .regnav{
     grid-area: 1 / 5 / 2 / 6; 
 }
+
+
+
+.foot{
+    background-color: #7BB599;
+    padding: 20px 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr 2fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+
+.footertitle{
+    grid-area: 1 / 1 / 2 / 2; 
+    text-align: center;
+    border-bottom: 1px solid #fff;
+}
+
+.footertitle h1{
+    font-family: "Jomhuria", serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+    font-size: 65px;
+    color: #f2f2f2; 
+}
+
+.footerlinks{
+    grid-area: 2 / 1 / 3 / 2; 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    padding: 20px 100px;
+}
+
+.footerhome{
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.footerservices{
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.footermhl{
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.footerconnect{
+    grid-area: 1 / 4 / 2 / 5;
+}
+
+.footlinks{
+    display: flex;
+    flex-direction: column;
+}
+
+#footlink{
+    text-decoration: none;
+    color:#f2f2f2;
+    font-size: 16px;
+    padding: 10px 10px 40px 0;
+    font-weight: 600;
+}
+
+#footlink:hover{
+    color: #EDD7B7;
+    transition: .2ms;
+}
+
+.foottitle{
+    font-size: 15px;
+    color: #f2f2f2;
+    padding: 30px 0px;
+}
+
+.footerhome #footlinkh{
+    text-decoration: none;
+    color:#f2f2f2;
+    font-size: 16px;
+    padding: 30px 10px 10px 0;
+    font-weight: 600;
+}
+
+.footerhome #footlinkh:hover{
+    color: #EDD7B7;
+    transition: .2ms;
+}
