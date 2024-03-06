@@ -67,6 +67,7 @@
                     <div class="footlinks">
                         <a href="/recipes" id="footlink">Recipes</a>
                         <a href="/mealplan" id="footlink">My Meal Plan</a>
+                        <a href="/mindfulness" id="footlink">Mindfulness</a>
                     </div>
                 </div>
                 <div class="footermhl">
