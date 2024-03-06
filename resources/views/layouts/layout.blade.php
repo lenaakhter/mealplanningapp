@@ -82,6 +82,13 @@
                 <div class="footerconnect">
                     <div class="foottitle">
                         <h2>Connect with us</h2>
+
+                        <span class="dot" href="" id="ig"></span>
+                        <span class="dot"href="" id="fb"></span>
+                        <span class="dot" href="" id="pin"></span>
+                        <span class="dot" href="" id="tt"></span>
+                        <span class="dot" href="" id="lnkdn"></span>
+
                     </div>
                 </div>
 
