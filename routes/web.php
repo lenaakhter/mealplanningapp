@@ -40,4 +40,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::resource('meals', MealController::class);
+Route::resource('recipes', RecipeController::class);
+Route::resource('ingredients', IngredientController::class);
+
+
 require __DIR__.'/auth.php';
