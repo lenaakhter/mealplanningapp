@@ -12,6 +12,10 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+    public function mealPlans() {
+        return $this->hasMany(MealPlan::class);
+    }
+
     /**
      * The attributes that are mass assignable.
      *
