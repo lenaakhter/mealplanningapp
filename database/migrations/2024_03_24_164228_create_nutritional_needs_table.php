@@ -21,7 +21,7 @@ return new class extends Migration
             $table->decimal('fats_g', 5, 2);
             $table->timestamps();
         });
-
+    }
     /**
      * Reverse the migrations.
      */
