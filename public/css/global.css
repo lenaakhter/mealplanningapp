@@ -5,6 +5,10 @@
     font-family: "Actor", sans-serif;
 }
 
+body{
+    background-color: #f7f7f7;
+}
+
 button {
     outline: none;
     color: white;
@@ -223,4 +227,192 @@ button:hover {
 .dot:hover{
     color: rgba(255, 255, 255, 1);
     box-shadow: 0 5px 15px rgba(28, 126, 95, 0.835);
+}
+
+
+/* -------------------- homepage -------------------- */
+
+.infobannerleft{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 13px;
+    grid-row-gap: 0px;
+    margin: 6rem 3rem;
+}
+
+.textleft{
+    grid-area: 1 / 1 / 2 / 2;
+    margin: 5rem 3rem;
+}
+
+.textleft h1{
+    font-family: "Jomhuria", serif;
+    color:#8bcfae;
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+.textleft p{
+    color: #567e6b;
+    font-size: large;
+}
+
+.imageright{
+    grid-area: 1 / 2 / 2 / 3;
+    background-image: url("images/walkingcroissant.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 75%;
+    position: relative;
+}
+
+.featuredrecipes{
+    margin: 3rem 6rem;
+}
+
+.featuredrecipes .featuredtitle h1{
+    font-family: "Jomhuria", sans-serif;
+    color: #8bcfae;
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+.featuredrecipes .featuredcards{
+   display: flex;
+   flex-direction: row; 
+    justify-content: center;
+}
+
+.card {
+    width: 190px;
+    height: 250px;
+    border-radius: 20px;
+    background-size: cover;
+    position: relative;
+    padding: 1.8rem;
+    border: 2px solid #bbb;
+    transition: 0.5s ease-out;
+    overflow: visible;
+    margin: 2rem;
+}
+
+.card-details {
+    color: black;
+    height: 100%;
+    gap: .5em;
+    display: grid;
+    place-content: center;
+}
+
+.card-button {
+    transform: translate(-50%, 125%);
+    width: 40%;
+    border-radius: 1rem;
+    border: none;
+    background-color: #7BB599;
+    color: #fff;
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    opacity: 0;
+    transition: 0.3s ease-out;
+}
+
+/*Hover*/
+.card:hover {
+    border-color: #7BB599;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+}
+
+.card:hover .card-button {
+    transform: translate(-50%, 50%);
+    opacity: 1;
+}
+
+#card1{
+    background-image: url('images/croissantandstrawberry.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#card2{
+    background-image: url('images/pancakes.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#card3{
+    background-image: url('images/salad.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#card4{
+    background-image: url('images/raspberrycupcake.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.infobannerright{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 13px;
+    grid-row-gap: 0px;
+    margin: 6rem 3rem;
+}
+
+.imageleft{
+    grid-area: 1 / 1 / 2 / 2;
+    background-image: url("images/thinking.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 62%;
+    position: relative;
+}
+
+.textright{
+    grid-area: 1 / 2 / 2 / 3;
+    margin: 5rem 3rem;
+    text-align: right;
+}
+
+.textright h1{
+    font-family: "Jomhuria", serif;
+    color:#8bcfae;
+    font-size: 4rem;
+    font-weight: 500;   
+}
+
+.textright p{
+    color: #567e6b;
+    font-size: large;
+}
+
+
+.bannerbottom{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/cookies.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+}
+
+
+.bannertext2 h1{
+    font-size: 27px;
+    margin: 2.5rem;
+    font-weight: 500;
+    color:#f2f2f2;
+    padding: 0 4rem;
+
 }
