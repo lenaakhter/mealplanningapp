@@ -416,3 +416,59 @@ button:hover {
     padding: 0 4rem;
 
 }
+
+/* -------------------- recipes -------------------- */
+
+.recipetext{
+    font-size: 23px;
+    color: #567e6b;
+    text-align: center;
+    padding: 10rem 14rem 6rem 14rem;
+}
+
+.recipesbanner{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/Cruffin_Header.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 7rem;
+    padding-bottom: 4rem;
+    margin-top: 5rem;
+}
+
+.parallax {
+    background: url("images/Cruffin_Header.jpg") no-repeat center;
+    background-size: cover; 
+    background-attachment: fixed; 
+    height: 350px;
+}
+  
+.parallax h1{
+    font-size: 42px;
+    letter-spacing: 2px;
+    text-align: center;
+    padding-top: 150px;
+    font-family: Montserrat, Helvetica;
+    color: #fff;
+}
+  
+.parallax h3{
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    font-family: Montserrat, Helvetica;
+    color: #fff;
+}
+  
+.parallax p{
+    font-size: 16px;
+    font-family: Montserrat, Helvetica;
+    padding: 25px;
+    text-align: center;
+    color: #b2b2b2
+}
