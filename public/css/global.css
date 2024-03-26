@@ -612,3 +612,21 @@ button:hover {
 #m8{
     grid-area: 7 / 7 / 9 / 9;
 }
+
+/* -------------------- login/ signup -------------------- */
+
+.accountcontainer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.accountcontainer .loginsect{
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.accountcontainer .signupsect{
+    grid-area: 1 / 2 / 2 / 3;
+}
