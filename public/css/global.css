@@ -453,7 +453,6 @@ button:hover {
     letter-spacing: 2px;
     text-align: center;
     padding-top: 150px;
-    font-family: Montserrat, Helvetica;
     color: #fff;
 }
   
@@ -461,14 +460,70 @@ button:hover {
     font-size: 18px;
     font-weight: 400;
     text-align: center;
-    font-family: Montserrat, Helvetica;
     color: #fff;
 }
   
 .parallax p{
     font-size: 16px;
-    font-family: Montserrat, Helvetica;
     padding: 25px;
     text-align: center;
     color: #b2b2b2
 }
+
+/* -------------------- meal plan -------------------- */
+
+.mealplantitle{
+    margin: 5rem 3rem;
+    margin-bottom: 0;
+}
+
+.mealplantitle h1{
+    color: #7BB599;
+    font-family: "Jomhuria", sans-serif;
+    font-size: 5rem;
+    font-weight: 500;
+}
+
+.mealplandetail{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 13px;
+    grid-row-gap: 0px;
+    margin: 0 3rem;
+}
+
+.mealplandetail .macros{
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.mealplandetail .macros h3{
+    color: #7BB599;
+    font-size: 30px;
+}
+
+.mealplandetail .editing{
+    grid-area: 1 / 2 / 2 / 3;
+    text-align: right;
+}
+
+.mealplandetail .editing p{
+    color: #b2b2b2;
+}
+
+.mealdetail{
+    margin-bottom: 4rem;
+}
+
+.mealtitle{
+    color: #7BB599;
+    margin: 0 3rem;
+    font-size: 1rem;
+}
+
+.mealcards{
+    display: flex;
+    flex-direction: row;
+    margin-left: 1rem;
+}
+
