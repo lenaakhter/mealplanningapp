@@ -527,3 +527,88 @@ button:hover {
     margin-left: 1rem;
 }
 
+/* -------------------- mindfulness -------------------- */
+
+#mindfulness{
+    background-image: url('images/mindbeach.jpeg');
+}
+
+.parallax h2{
+    font-family: "Jomhuria";
+    font-size: 6rem;
+    font-weight: 500;
+    text-align: center;
+    padding-top: 150px;
+    color: #fff;
+}
+
+
+.bannerquote{
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 8rem;
+    margin: 0 5rem;
+    margin-bottom: 10rem;
+}
+
+
+.bannertextquote h1{
+    font-size: 1.75rem;
+    font-weight: 500;
+    color:#567e6b;
+    margin-bottom: 2rem;
+}
+
+.bannerbutton{
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.mindcollage{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin: 5rem;
+}
+
+.mimage{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 62%;
+}
+
+#m1{
+    grid-area: 1 / 1 / 3 / 3;
+    background-image: url('images/cookies.jpg');
+}
+
+#m2{
+    grid-area: 3 / 1 / 6 / 4;
+}
+
+#m3{
+    grid-area: 1 / 3 / 3 / 6;
+}
+
+#m4{
+    grid-area: 1 / 6 / 3 / 9;
+}
+
+#m5{
+    grid-area: 3 / 4 / 7 / 9;
+}
+
+#m6{
+    grid-area: 6 / 1 / 9 / 4;
+}
+
+#m7{
+    grid-area: 7 / 4 / 9 / 7;
+}
+
+#m8{
+    grid-area: 7 / 7 / 9 / 9;
+}
