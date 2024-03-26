@@ -621,6 +621,8 @@ button:hover {
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    margin: 5rem 9rem;
+    padding-bottom: 5rem;
 }
 
 .accountcontainer .loginsect{
@@ -630,3 +632,25 @@ button:hover {
 .accountcontainer .signupsect{
     grid-area: 1 / 2 / 2 / 3;
 }
+
+.accountcontainer h1{
+    font-family: "Jomhuria";
+    font-weight: 500;
+    color: #7BB599;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.input{
+    border: none;
+    border-bottom: 1px solid #567e6b;
+    width: 80%;
+    height: 1.7rem;
+    margin-bottom: 1rem;
+    background-color: #f7f7f7;
+}
+
+.formbutton{
+    margin-top: 1.7rem;
+}
+
