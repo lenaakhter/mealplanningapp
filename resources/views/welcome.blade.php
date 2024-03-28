@@ -31,6 +31,10 @@
     </div>
 </div>
 
+<!-- <div class="test-img"> -->
+    <img src="/images/cookies.jpg" alt="image" width="24" height="35"></img>
+<!-- </div> -->
+
 <div class="featuredrecipes">
     <div class="featuredtitle">
         <h1>Featured Recipes</h1>

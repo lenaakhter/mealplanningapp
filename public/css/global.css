@@ -33,8 +33,13 @@ button:hover {
     box-shadow: 0 0 0 4px #8bcfae, 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
 }
 
+
+
+
+
+
 .bannertitle{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/croissantandstrawberry.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/fe-images/croissantstrawberries.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -260,7 +265,7 @@ button:hover {
 
 .imageright{
     grid-area: 1 / 2 / 2 / 3;
-    background-image: url("images/walkingcroissant.png");
+    background-image: url("/images/walkingcroissant.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 75%;
@@ -333,25 +338,25 @@ button:hover {
 }
 
 #card1{
-    background-image: url('images/croissantandstrawberry.jpg');
+    background-image: url('/images/croissantandstrawberry.jpg');
     background-position: center;
     background-repeat: no-repeat;
 }
 
 #card2{
-    background-image: url('images/pancakes.png');
+    background-image: url('/images/pancakes.png');
     background-position: center;
     background-repeat: no-repeat;
 }
 
 #card3{
-    background-image: url('images/salad.png');
+    background-image: url('/images/salad.png');
     background-position: center;
     background-repeat: no-repeat;
 }
 
 #card4{
-    background-image: url('images/raspberrycupcake.png');
+    background-image: url('/images/raspberrycupcake.png');
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -367,7 +372,7 @@ button:hover {
 
 .imageleft{
     grid-area: 1 / 1 / 2 / 2;
-    background-image: url("images/thinking.png");
+    background-image: url("/images/thinking.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 62%;
@@ -394,7 +399,7 @@ button:hover {
 
 
 .bannerbottom{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/cookies.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/images/cookies.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -427,7 +432,7 @@ button:hover {
 }
 
 .recipesbanner{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/Cruffin_Header.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/images/Cruffin_Header.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -442,7 +447,7 @@ button:hover {
 }
 
 .parallax {
-    background: url("images/Cruffin_Header.jpg") no-repeat center;
+    background: url("/images/Cruffin_Header.jpg") no-repeat center;
     background-size: cover; 
     background-attachment: fixed; 
     height: 350px;
@@ -530,7 +535,7 @@ button:hover {
 /* -------------------- mindfulness -------------------- */
 
 #mindfulness{
-    background-image: url('images/mindbeach.jpeg');
+    background-image: url('/images/mindbeach.jpeg');
 }
 
 .parallax h2{
@@ -582,7 +587,7 @@ button:hover {
 
 #m1{
     grid-area: 1 / 1 / 3 / 3;
-    background-image: url('images/cookies.jpg');
+    background-image: url('/images/cookies.jpg');
 }
 
 #m2{
