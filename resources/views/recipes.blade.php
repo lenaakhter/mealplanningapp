@@ -33,6 +33,7 @@
 
     <div class="featuredcards">
         @foreach($recipes as $recipe)
+        <a href="/recipe/{{$recipe->id}}">
             <div class="recipecard">
                 <div class="cardimg">
                     <img src="{{$recipe->coverimg}}"></img>
@@ -42,6 +43,7 @@
                   </div>
                   
             </div>
+        </a>
         @endforeach
         
 

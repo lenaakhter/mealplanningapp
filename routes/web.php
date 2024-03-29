@@ -31,9 +31,7 @@ Route::get('/mindfulness', function () {
     return view('mindfulness');
 });
 
-Route::get('/item', function () {
-    return view('item');
-});
+Route::get('/recipe/{id}', [RecipeController::class, 'item']); 
 
 // Route for Recipes to be shown on recipe page
 Route::get('/recipes', [RecipeController::class, 'index'])->name('recipes.index');

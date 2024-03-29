@@ -15,4 +15,11 @@ class RecipeController extends Controller
         return view('recipes', ['recipes' => $recipes]);
     }
 
+    public function item($id)
+    {
+        //Method created to get a certain product from the table. If it not assigned an ID in the table it will not show.
+        $item = Recipe::findOrFail($id);
+        return view('item', ['item' => $item]);
+    }
+
 }
