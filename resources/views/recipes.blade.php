@@ -30,31 +30,20 @@
     <div class="featuredtitle">
         <h1>Featured Recipes</h1>
     </div>
-    <div class="featuredcards">
 
-        <div class="card" id="card1">
-            <div class="card-details">
+    <div class="featuredcards">
+        @foreach($recipes as $recipe)
+            <div class="recipecard">
+                <div class="cardimg">
+                    <img src="{{$recipe->coverimg}}"></img>
+                </div>
+                <div class="recipeprep">
+                    <h5>{{$recipe->title}}</h5>
+                  </div>
+                  
             </div>
-            <button class="card-button">Lets Cook!</button>
-        </div>
+        @endforeach
         
-        <div class="card" id="card2">
-            <div class="card-details">
-            </div>
-            <button class="card-button">Lets Cook!</button>
-        </div>
-        
-        <div class="card" id="card3">
-            <div class="card-details">
-            </div>
-            <button class="card-button">Lets Cook!</button>
-        </div>
-        
-        <div class="card" id="card4">
-            <div class="card-details">
-            </div>
-            <button class="card-button">Lets Cook!</button>
-        </div>
 
     </div>
 </div>

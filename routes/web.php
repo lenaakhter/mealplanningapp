@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RecipeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,6 +30,15 @@ Route::get('/mealplan', function () {
 Route::get('/mindfulness', function () {
     return view('mindfulness');
 });
+
+Route::get('/item', function () {
+    return view('item');
+});
+
+// Route for Recipes to be shown on recipe page
+Route::get('/recipes', [RecipeController::class, 'index'])->name('recipes.index');
+
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

@@ -62,8 +62,56 @@ button:hover {
 
 .bannerbutton{
     grid-area: 2 / 1 / 3 / 2;
+    background-size: cover;
 }
 
+
+.recipecard{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    border: solid 1px #b2b2b2;
+    border-radius: 15px;
+}
+
+.cardimg{
+    grid-area: 1 / 1 / 2 / 2;
+    background-position: center;
+    width: 15rem;
+    height: 20rem;
+
+}
+
+.cardimg img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+}
+
+.recipeprep {
+    grid-area: 2 / 1 / 3 / 2;
+    text-align: center;
+}
+
+.recipeprep h5{
+    font-size: 1.3rem;
+    color: #567e6b;
+    padding: 10px;
+}
+
+.icon {
+    width: 20px; /* Size of the icon */
+    height: 20px; /* Size of the icon */
+    background-image: url('/images/timer.png');
+    /* background-position: center;
+    background-repeat: no-repeat; */
+}
+  
 
 
 

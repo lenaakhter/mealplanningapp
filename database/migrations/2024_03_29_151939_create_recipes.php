@@ -13,8 +13,6 @@ return new class extends Migration
     {
         Schema::create('recipes', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('meal_id');
-            $table->foreign('meal_id')->references('id')->on('meals')->onDelete('cascade');
             $table->string('title');
             $table->text('description')->nullable();
             $table->integer('preparation_time')->nullable();
@@ -24,6 +22,7 @@ return new class extends Migration
             $table->decimal('protein', 8, 2)->nullable();
             $table->decimal('carbohydrates', 8, 2)->nullable();
             $table->decimal('fats', 8, 2)->nullable();
+            $table->string('coverimg');
             $table->timestamps();
         });
     }
