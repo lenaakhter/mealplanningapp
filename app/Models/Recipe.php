@@ -19,4 +19,8 @@ class Recipe extends Model
         return $this->belongsToMany(Ingredient::class, 'recipe_ingredients')
                     ->withPivot('quantity', 'measurement_unit');
     }
+
+        //to stop updated_at and created_at from showing up as we are not using for this table.
+        public $timestamps = false;
+        
 }
