@@ -21,4 +21,9 @@ class MealPlan extends Model
     {
         return $this->hasMany(ShoppingList::class);
     }
+
+    public function recipes(){
+        return $this->belongsTo(MealPlan::class);
+    }
+
 }

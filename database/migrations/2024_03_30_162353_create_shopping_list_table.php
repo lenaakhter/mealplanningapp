@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('shopping_lists', function (Blueprint $table) {
+        Schema::create('shopping_list', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('meal_plan_id');
             $table->unsignedBigInteger('ingredient_id');
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('shopping_lists');
+        Schema::dropIfExists('shopping_list');
     }
 };
