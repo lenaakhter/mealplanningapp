@@ -14,11 +14,11 @@ class MealPlanController extends Controller
 
     //Adding a recipe to the meal plan
     public function addToMealPlan (Request $request){
+        $MealPlan = new MealPlan;
         $MealPlan->email = Auth::user()->email;
         //assigning recipe ID to a variable using recipe controller
-        $Recipe = Recipe::find('recipe_id');
-        $MealPlan = new MealPlan;
-        $MealPlan->recipe_id = $Recipe->id;
+        $recipes = Recipe::find('id');
+        $MealPlan->recipe_id = $recipes->id;
         $MealPlan->save();
     }
 
