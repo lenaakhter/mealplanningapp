@@ -11,22 +11,19 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('nutritional_needs', function (Blueprint $table) {
+        Schema::create('age_range', function (Blueprint $table) {
             $table->id();
-            $table->string('age_range');
-            $table->string('gender');
-            $table->integer('calories');
-            $table->decimal('protein_g', 5, 2);
-            $table->decimal('carbohydrates_g', 5, 2);
-            $table->decimal('fats_g', 5, 2);
             $table->timestamps();
+            $table->integer('age_lower_bound');
+            $table->integer('age_upper_bound');
         });
     }
+
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('nutritional_needs');
+        Schema::dropIfExists('age_range');
     }
 };

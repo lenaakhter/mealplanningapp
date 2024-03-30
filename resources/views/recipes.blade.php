@@ -26,6 +26,8 @@
 </div>
 
 
+
+
 <div class="featuredrecipes">
     <div class="featuredtitle">
         <h1>Featured Recipes</h1>
@@ -40,7 +42,12 @@
                 </div>
                 <div class="recipeprep">
                     <h5>{{$recipe->title}}</h5>
-                  </div>
+                <div class="prepline">
+                    <img src="/images/timer.png"></img> 
+                    <p>{{$recipe->preparation_time}}</p>
+                    
+                </div>
+                </div>
                   
             </div>
         </a>
@@ -49,6 +56,7 @@
 
     </div>
 </div>
+
 
 
 <div class="parallax">

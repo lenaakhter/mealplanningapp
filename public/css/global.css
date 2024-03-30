@@ -74,6 +74,8 @@ button:hover {
     grid-row-gap: 0px;
     border: solid 1px #b2b2b2;
     border-radius: 15px;
+    background-color: #ffff;
+    margin: 2rem;
 }
 
 .cardimg{
@@ -102,7 +104,35 @@ button:hover {
     font-size: 1.3rem;
     color: #567e6b;
     padding: 10px;
+    padding-top: 20px;
 }
+
+.prepline{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.prepline img{
+    width: 1.5rem;
+}
+
+.prepline p {
+    font-size: 1.3rem;
+    color: #b2b2b2;
+}
+
+a{
+    text-decoration: none !important;
+
+}
+
+a:hover{
+    text-decoration: none;
+}
+
 
 .icon {
     width: 20px; /* Size of the icon */
