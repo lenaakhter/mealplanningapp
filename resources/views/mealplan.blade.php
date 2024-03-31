@@ -25,11 +25,7 @@
 <br>
 <br>
 
-<form action="{{ route('mealplan.add') }}" method="POST">
-    @csrf
-    <input type="hidden" name="recipe_id" value="ID_OF_THE_RECIPE">
-    <button type="submit">Add to Meal Plan</button>
-</form>
+
 
 
 
