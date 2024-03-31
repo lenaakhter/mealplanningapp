@@ -6,6 +6,21 @@
     <h1>My Meal Plan</h1>
 </div>
 
+
+
+<p>  {{ $mealplan[0] -> fats}} </p>
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="mealplandetail">
     <div class="macros">
         <h3>
