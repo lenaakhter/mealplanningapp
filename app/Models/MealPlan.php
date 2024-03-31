@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class MealPlan extends Model
 {
+    protected $table='meal_plans';
     public function user()
     {
         return $this->belongsTo(User::class);

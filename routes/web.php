@@ -37,7 +37,7 @@ Route::get('/recipe/{id}', [RecipeController::class, 'item']);
 // Route for Recipes to be shown on recipe page
 Route::get('/recipes', [RecipeController::class, 'index'])->name('recipes.index');
 
-Route::post('/add-to-meal-plan', [MealPlanController::class, 'addToMealPlan'])->name('mealplan.add');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
