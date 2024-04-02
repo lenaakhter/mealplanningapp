@@ -13,14 +13,11 @@ return new class extends Migration
     {
         Schema::create('shopping_list', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('meal_plan_id');
-            $table->unsignedBigInteger('ingredient_id');
             $table->decimal('quantity_required', 8, 2);
             $table->string('measurement_unit');
             $table->timestamps();
-
-            $table->foreign('meal_plan_id')->references('id')->on('meal_plans')->onDelete('cascade');
-            $table->foreign('ingredient_id')->references('id')->on('ingredients')->onDelete('cascade');
+            $table->integer('meal_plan_id')->references('id')->on('meal_plans')->onDelete('cascade');
+            $table->integer('ingredient_id')->references('id')->on('ingredients')->onDelete('cascade');
         });
     }
 

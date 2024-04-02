@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('meal_times', function (Blueprint $table) {
             $table->id();
             $table->string('meal_time');
+            $table->integer('userID')->references('id')->on('users');
             $table->timestamps();
         });
     }

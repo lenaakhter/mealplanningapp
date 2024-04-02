@@ -38,9 +38,17 @@ Route::get('/recipe/{id}', [RecipeController::class, 'item']);
 Route::get('/recipes', [RecipeController::class, 'index'])->name('recipes.index');
 
 
-Route::get('/mealplan', [MealPlanController::class, 'index'])->name('mealplan.index');
-Route::get('/mealplan/create', [MealPlanController::class, 'create'])->name('mealplan.create');
-Route::get('/mealplan/{id}', [MealPlanController::class, 'show'])->name('mealplan.show');
+//Basket routing
+Route::get('/mealplan', [MealPlanController::class, 'index'])->name('mealplan');
+
+// Adding a product to basket
+Route::post('/mealplan/add', [MealPlanController::class, 'add'])->name('mealplan.add');
+
+//Removing product from basket
+Route::post('/mealplan/remove', [MealPlanController::class, 'remove'])->name('mealplan.remove');
+
+//Checkout function
+Route::post('/mealplan/checkout', [MealPlanController::class, 'checkout'])->name('mealplan.checkout');
 
 
 

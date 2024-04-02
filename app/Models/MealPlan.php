@@ -7,24 +7,19 @@ use Illuminate\Database\Eloquent\Model;
 
 class MealPlan extends Model
 {
-    protected $table='meal_plans';
-    public function user()
-    {
-        return $this->belongsTo(User::class);
-    }
+    protected $table = 'meal_plans';
 
-    public function mealTimes()
-    {
-        return $this->hasMany(MealTime::class);
-    }
+    protected $primaryKey = 'mealPlanID';
 
-    public function shoppingLists()
-    {
-        return $this->hasMany(ShoppingList::class);
-    }
+    public $timestamps = false;
 
-    public function recipes(){
-        return $this->belongsTo(MealPlan::class);
-    }
+    protected $fillable = ['userID', 'recipeID', 'total'];
+
+    // protected $fillable = ['user_id', 'products', 'completed'];
+
+    // protected $casts = ['products' => 'array'];
+
+    use HasFactory;
+
 
 }

@@ -12,18 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('meal_plans', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('recipe_id');
-            $table->unsignedBigInteger('meal_id');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('recipe_id')->references('id')->on('recipes')->onDelete('cascade');
-            $table->foreign('meal_id')->references('id')->on('meal_times')->onDelete('cascade');
-            $table->integer('total_calories');
-            $table->date('date_start');
-            $table->date('date_end');
-            $table->string('day_of_week');
-            $table->timestamps();
+            $table->id('mealPlanID')->autoIncrement();
+            $table->integer('userID')->references('id')->on('users');
+            $table->integer('recipeID')->references('id')->on('recipes');
         });
     }
 

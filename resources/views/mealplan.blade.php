@@ -8,18 +8,21 @@
 
 
 
-<p>  {{ $mealplan[0] -> fats}} </p>
+
+@foreach ($mealplan as $recipe)
+
+<p>{{$recipe -> title}}</p>
 
 
-
-
-
-
-
-
-
-
-
+<form action="{{ route('mealplan.remove') }}" method="POST">
+                            <input type="hidden" name="mealPlanID" id="mealPlanID" value="{{ $recipe->mealPlanID }}">
+                            @csrf
+                            <button class="btn btn-danger" id = "remove_button">Remove</button>
+</form
+                        
+                        
+                        
+@endforeach
 
 <div class="mealplandetail">
     <div class="macros">
