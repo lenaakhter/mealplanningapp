@@ -17,8 +17,7 @@ class MealPlanController extends Controller
         $mealplan =  DB::table('meal_plans')
         ->where('meal_plans.userID', '=', auth()->id())
         ->join('recipes', 'meal_plans.recipeID', '=', 'recipes.id')
-        ->join('meal_times', 'meal_times.mealTimeID', '=', 'meal_times.id')
-        ->select('meal_plans.mealPlanID', 'recipes.*', 'meal_times.*')
+        ->select('meal_plans.mealPlanID', 'recipes.*')
         ->get();
 
         // if (count($basket) == 0) {
@@ -34,11 +33,16 @@ class MealPlanController extends Controller
     public function add(Request $request)
     {
     $recipeID = $request->recipe;
+    $mealplan = new MealPlan();
 
-    $mealplan = MealPlan::create([
-        'userID' => auth()->id(),
-        'recipeID' => $recipeID, 
-    ]);
+    $mealplan -> userID = auth()->id();
+    $mealplan -> recipeID = $recipeID;
+
+    $mealplan -> mealtime = request('mealtime');
+    $mealplan -> dayOfWeek = request('dayOfWeek');
+
+
+    $mealplan->save();
 
     return back()->with('success', 'Product added to your basket.');
     return view('mealplan', [ 'recipes' => $recipes ]);

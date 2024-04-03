@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id('mealPlanID')->autoIncrement();
             $table->integer('userID')->references('id')->on('users');
             $table->integer('recipeID')->references('id')->on('recipes');
+            $table->string('mealtime');
+            $table->string('dayOfWeek');
         });
     }
 
