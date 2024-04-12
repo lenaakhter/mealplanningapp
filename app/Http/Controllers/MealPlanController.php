@@ -30,23 +30,35 @@ class MealPlanController extends Controller
     }
 
     // Function to add product to basket
-    public function add(Request $request)
-    {
+    public function add(Request $request){
     $recipeID = $request->recipe;
+    $dayOfWeek = $request->input('dayOfWeek');
     $mealplan = new MealPlan();
 
     $mealplan -> userID = auth()->id();
     $mealplan -> recipeID = $recipeID;
 
     $mealplan -> mealtime = request('mealtime');
-    $mealplan -> dayOfWeek = request('dayOfWeek');
+    $mealplan -> dayOfWeek = $dayOfWeek;
 
 
-    $mealplan->save();
+    $maxCalories = $this->calculateMaxCalories();
+    $dayCalories = $this->getDayCalories($dayOfWeek);
+
+    print($maxCalories);
+    $recipeitem = Recipe::findOrFail($recipeID);
+    $itemcalories = $recipeitem->calories;
+
+    if ($dayCalories + $itemcalories > $maxCalories) {
+        return response()->json(['error' => 'Total calories exceed recommended intake. Please remove some recipes.'], 400);}
+    else{
+        $mealplan->save();
+    }
 
     return back()->with('success', 'Product added to your basket.');
-    return view('mealplan', [ 'recipes' => $recipes ]);
+
     }
+
 
     //
     public function get(Request $request) {
@@ -62,6 +74,51 @@ class MealPlanController extends Controller
             ->join('recipes', 'meal_plans.recipeID', '=', 'recipes.id')
             ->sum('recipes.calories');
     }
+
+
+
+    public function calculateMaxCalories(){
+        $user = auth()->user();
+        if (!$user) {
+            // Handle the case where there is no authenticated user
+            return response()->json(['error' => 'Unauthorized access'], 401);
+        }
+    
+        $age = $user->age ?? null; // Using null coalescing in case 'age' is not set
+        $gender = $user->gender ?? null; // Using null coalescing in case 'gender' is not set
+    
+        if (is_null($age) || is_null($gender)) {
+            // Handle cases where necessary information is not available
+            return response()->json(['error' => 'User age or gender not specified'], 400);
+        }
+    
+        if ($gender === 'male') {
+            if ($age >= 65) return 2300;
+            if ($age >= 55) return 2400;
+            if ($age >= 45) return 2500;
+            return 2700; // This covers all younger age groups
+        } else {
+            if ($age >= 65) return 2000;
+            if ($age >= 45) return 2000; // Same value for all ages 45 and up
+            return 2200; // This covers all younger age groups
+        }
+    }
+    
+
+
+
+
+
+    public function getDayCalories($dayOfWeek) {
+        return DB::table('meal_plans')
+            ->where('meal_plans.userID', '=', auth()->id())
+            ->where('meal_plans.dayOfWeek', '=', $dayOfWeek) 
+            ->join('recipes', 'meal_plans.recipeID', '=', 'recipes.id')
+            ->sum('recipes.calories');
+    }
+
+
+
 
     //Get basket for user with product price included (does not need total column on basket table)
     public function getDetailedBasket(Request $request) {
@@ -92,6 +149,34 @@ class MealPlanController extends Controller
     $mealplan->save();
 
     return redirect()->route('item')->with('success', 'Checkout completed successfully.');
+    }
+
+    public function addRecipe(Request $request)
+    {
+        // Get user's age and gender
+        $userAge = $request->input('age');
+        $userGender = $request->input('gender');
+
+        // Calculate recommended calories based on age and gender
+        $recommendedCalories = $this->calculateRecommendedCalories($userAge, $userGender);
+
+        // Get the IDs of the recipes to add
+        $recipeIds = $request->input('recipe_ids');
+
+        // Fetch the recipes and sum up their calories
+        $totalCalories = Recipe::whereIn('id', $recipeIds)->sum('calories');
+
+        // Compare total calories with recommended intake
+        if ($totalCalories > $recommendedCalories) {
+            return response()->json(['error' => 'Total calories exceed recommended intake. Please remove some recipes.'], 400);
+        } elseif ($totalCalories < $recommendedCalories) {
+            return response()->json(['error' => 'Total calories fall below recommended intake. Please add more recipes.'], 400);
+        } else {
+            // Add recipes to the meal plan
+            // Code to add recipes goes here...
+
+            return response()->json(['message' => 'Recipes added successfully.'], 200);
+        }
     }
 
 
