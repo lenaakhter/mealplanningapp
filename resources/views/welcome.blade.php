@@ -40,30 +40,28 @@
         <h1>Featured Recipes</h1>
     </div>
     <div class="featuredcards">
+        @php $count = 0; @endphp
+        @foreach($recipes as $recipe)
+            @if($count < 4)
+                <a href="/recipe/{{$recipe->id}}">
+                    <div class="recipecard">
+                        <div class="cardimg">
+                            <img src="{{$recipe->coverimg}}"></img>
+                        </div>
+                        <div class="recipeprep">
+                            <h5>{{$recipe->title}}</h5>
+                            <div class="prepline">
+                                <img src="/images/timer.png"></img>
+                                <p>{{$recipe->preparation_time}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                @php $count++; @endphp
+            @endif
+        @endforeach
 
-        <div class="card" id="card1">
-            <div class="card-details">
-            </div>
-            <button class="card-button">Lets Cook!</button>
-        </div>
         
-        <div class="card" id="card2">
-            <div class="card-details">
-            </div>
-            <button class="card-button">Lets Cook!</button>
-        </div>
-        
-        <div class="card" id="card3">
-            <div class="card-details">
-            </div>
-            <button class="card-button">Lets Cook!</button>
-        </div>
-        
-        <div class="card" id="card4">
-            <div class="card-details">
-            </div>
-            <button class="card-button">Lets Cook!</button>
-        </div>
 
     </div>
 </div>

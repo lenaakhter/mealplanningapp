@@ -76,6 +76,10 @@ button:hover {
     border-radius: 15px;
     background-color: #ffff;
     margin: 2rem;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    width: 15rem;
+    height: 28rem;
 }
 
 .cardimg{
@@ -83,7 +87,7 @@ button:hover {
     background-position: center;
     width: 15rem;
     height: 20rem;
-
+    word-wrap: break-word;
 }
 
 .cardimg img{
@@ -98,6 +102,7 @@ button:hover {
 .recipeprep {
     grid-area: 2 / 1 / 3 / 2;
     text-align: center;
+
 }
 
 .recipeprep h5{
@@ -105,6 +110,7 @@ button:hover {
     color: #567e6b;
     padding: 10px;
     padding-top: 20px;
+    word-wrap: break-word;
 }
 
 .prepline{
@@ -357,7 +363,7 @@ a:hover{
 .featuredrecipes .featuredtitle h1{
     font-family: "Jomhuria", sans-serif;
     color: #8bcfae;
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 500;
 }
 
@@ -376,7 +382,7 @@ a:hover{
     padding: 1.8rem;
     border: 2px solid #bbb;
     transition: 0.5s ease-out;
-    overflow: visible;
+    overflow: none;
     margin: 2rem;
 }
 
@@ -737,3 +743,92 @@ a:hover{
     margin-top: 1.7rem;
 }
 
+/* -------------------- itempage -------------------- */
+.itemcontainer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin: 50px 10rem;
+}
+
+.itemleft{
+    grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemleft img{
+    width: 28rem;
+    height: 30rem;
+    border-radius: 30px;
+}
+
+.itemright{
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.itemright h2{
+    font-family: "Jomhuria";
+    color: #567e6b;
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+.iconlines{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.iconlines img{
+    height: 2.5rem;
+    width: auto;
+    margin-right: 5px;
+}
+
+.iconlines p {
+    font-size: 1.3rem;
+    color: #7BB599;
+}
+
+.serveprepsect{
+    margin-bottom: 1.5rem;
+}
+
+.itemright h5{
+    color: #7BB599;
+    font-size: medium;   
+    padding-bottom: 5px;
+}
+
+.itemright p{
+    color: #567e6b;
+    font-size: medium;
+    padding-top: 15px;
+}
+
+.itemform{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#mealtime, #dayOfWeek{
+    width: 12rem;
+    height: 30px;
+    color: #567e6b;
+    font-size: medium;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.itembutton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
