@@ -35,36 +35,6 @@
     <img src="/images/cookies.jpg" alt="image" width="24" height="35"></img>
 <!-- </div> -->
 
-<div class="featuredrecipes">
-    <div class="featuredtitle">
-        <h1>Featured Recipes</h1>
-    </div>
-    <div class="featuredcards">
-        @php $count = 0; @endphp
-        @foreach($recipes as $recipe)
-            @if($count < 4)
-                <a href="/recipe/{{$recipe->id}}">
-                    <div class="recipecard">
-                        <div class="cardimg">
-                            <img src="{{$recipe->coverimg}}"></img>
-                        </div>
-                        <div class="recipeprep">
-                            <h5>{{$recipe->title}}</h5>
-                            <div class="prepline">
-                                <img src="/images/timer.png"></img>
-                                <p>{{$recipe->preparation_time}}</p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                @php $count++; @endphp
-            @endif
-        @endforeach
-
-        
-
-    </div>
-</div>
 
 <div class="infobannerright">
     <div class="imageleft">

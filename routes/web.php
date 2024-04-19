@@ -37,7 +37,7 @@ Route::get('/recipe/{id}', [RecipeController::class, 'item']);
 // Route for Recipes to be shown on recipe page
 Route::get('/recipes', [RecipeController::class, 'index'])->name('recipes.index');
 
-Route::get('/', [RecipeController::class, 'index'])->name('recipes.index');
+
 
 
 //Basket routing

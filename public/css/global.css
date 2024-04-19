@@ -832,3 +832,7 @@ a:hover{
     justify-content: center;
     align-items: center;
 }
+
+label{
+    color: #567e6b;
+}
