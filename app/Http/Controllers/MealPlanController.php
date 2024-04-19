@@ -13,21 +13,26 @@ use Illuminate\Support\Facades\Auth;
 class MealPlanController extends Controller
 {
 
-    public function index() {
-        $mealplan =  DB::table('meal_plans')
-        ->where('meal_plans.userID', '=', auth()->id())
-        ->join('recipes', 'meal_plans.recipeID', '=', 'recipes.id')
-        ->select('meal_plans.mealPlanID', 'recipes.*')
-        ->get();
-
-        // if (count($basket) == 0) {
-        //     return view('emptybasket');
-        // }
-
+    public function index(Request $request) {
+        $day = $request->input('day');  // Get the day from the query string
+    
+        $query = DB::table('meal_plans')
+            ->where('meal_plans.userID', '=', auth()->id())
+            ->join('recipes', 'meal_plans.recipeID', '=', 'recipes.id')
+            ->select('meal_plans.mealPlanID', 'meal_plans.dayOfWeek', 'recipes.*');
+    
+        if ($day) {
+            $query->where('meal_plans.dayOfWeek', $day); // Filter by the day of the week if provided
+        }
+    
+        $mealplan = $query->get();
+    
         return view('mealplan', [
             'mealplan' => $mealplan,
+            'selectedDay' => $day,
         ]);
     }
+    
 
     // Function to add product to basket
     public function add(Request $request){

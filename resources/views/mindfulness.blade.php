@@ -8,6 +8,14 @@
 
 </div>
 
+<div>
+        <p>{{ $quote->text }}</p>
+        <p><strong>{{ $quote->author }}</strong></p>
+        <form action="{{ route('quotes.index') }}" method="GET">
+            <button type="submit">Show Another Quote</button>
+        </form>
+</div>
+
 <div class="bannerquote">
     <div class="bannercontents">
         <div class="bannertextquote">

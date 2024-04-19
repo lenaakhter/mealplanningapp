@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RecipeController;
 use App\Http\Controllers\MealPlanController;
+use App\Http\Controllers\QuoteController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -37,6 +38,9 @@ Route::get('/recipe/{id}', [RecipeController::class, 'item']);
 // Route for Recipes to be shown on recipe page
 Route::get('/recipes', [RecipeController::class, 'index'])->name('recipes.index');
 
+Route::post('/mealplan', [MealPlanController::class, 'index'])->name('mealplan.index');
+
+Route::get('/mindfulness', [QuoteController::class, 'index'])->name('quotes.index');
 
 
 

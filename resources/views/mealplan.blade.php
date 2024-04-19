@@ -6,77 +6,35 @@
     <h1>My Meal Plan</h1>
 </div>
 
+    <!-- Day selection form -->
+    <form action="{{ route('mealplan.index') }}" method="GET">
+        <select name="day" onchange="this.form.submit()">
+            <option value="">Select a day</option>
+            <option value="Monday" {{ $selectedDay == 'Monday' ? 'selected' : '' }}>Monday</option>
+            <option value="Tuesday" {{ $selectedDay == 'Tuesday' ? 'selected' : '' }}>Tuesday</option>
+            <option value="Wednesday" {{ $selectedDay == 'Wednesday' ? 'selected' : '' }}>Wednesday</option>
+            <option value="Thursday" {{ $selectedDay == 'Thursday' ? 'selected' : '' }}>Thursday</option>
+            <option value="Friday" {{ $selectedDay == 'Friday' ? 'selected' : '' }}>Friday</option>
+            <option value="Saturday" {{ $selectedDay == 'Saturday' ? 'selected' : '' }}>Saturday</option>
+            <option value="Sunday" {{ $selectedDay == 'Sunday' ? 'selected' : '' }}>Sunday</option>
+        </select>
+    </form>
 
-
-
-@foreach ($mealplan as $recipe)
-
-<p>{{$recipe -> title}}</p>
-
-
-<form action="{{ route('mealplan.remove') }}" method="POST">
-                            <input type="hidden" name="mealPlanID" id="mealPlanID" value="{{ $recipe->mealPlanID }}">
-                            @csrf
-                            <button class="btn btn-danger" id = "remove_button">Remove</button>
-</form
-                        
-                        
-                        
-@endforeach
-
-<div class="mealplandetail">
-    <div class="macros">
-        <h3>
-            My Macros
-        </h3>
-    </div>
-    <div class="editing">
-        <p>
-            Edit
-        </p>
-    </div>
-</div>
-
-<br>
-<br>
-<h4>loader placeholder</h4>
-<br>
-<br>
-
-
-
-
-
-
-<div class="mealdetail">
-    <div class="mealtitle">
-        <h1>Breakfast</h1>
-    </div>
-    <div class="mealcards">
-        <div class="card" id="card1">
-            <div class="card-details">
-            </div>
-            <button class="card-button">Lets Cook!</button>
-        </div>
+    <!-- Display meal plans -->
+    @if(count($mealplan) > 0)
+        @foreach($mealplan as $plan)
         
-        <div class="card" id="card2">
-            <div class="card-details">
+            <div>
+                <h3>{{ $plan->title }}</h3> <!-- Assuming 'name' is a column in 'recipes' -->
+                <p>{{ $plan->calories }}</p> <!-- Assuming 'description' is a column in 'recipes' -->
+                <p>Day: {{ $plan->dayOfWeek }}</p>
             </div>
-            <button class="card-button">Lets Cook!</button>
-        </div>
-        
-        <div class="card" id="card3">
-            <div class="card-details">
-            </div>
-            <button class="card-button">Lets Cook!</button>
-        </div>
-        
-        <div class="card" id="card4">
-            <div class="card-details">
-            </div>
-            <button class="card-button">Lets Cook!</button>
-        </div>
-    </div>
+        @endforeach
+    @else
+        <p>No meal plans found for this day.</p>
+    @endif
+
+
 </div>
 
 @endsection
