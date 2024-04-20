@@ -8,18 +8,24 @@
 
 </div>
 
+<div>
+        <p>{{ $quote->text }}</p>
+        <p><strong>{{ $quote->author }}</strong></p>
+        <form action="{{ route('quotes.index') }}" method="GET">
+            <button type="submit">Show Another Quote</button>
+        </form>
+</div>
 
 <div class="bannerquote">
     <div class="bannercontents">
         <div class="bannertextquote">
-            <h1>{{ $quote->text }}</h1>
-            <p>{{ $quote->author }}</p>
+            <h1>Our greatest weakness lies in giving up. The most certain way to succeed is always to try just one more time.</h1>
         </div>
         <div class="bannerbutton">
             <a href="/">
-            <form action="{{ route('quotes.index') }}" method="GET">
-            <button type="submit">New Quote</button>
-        </form>
+                <button>
+                    New Quote
+                </button>
             </a>
         </div>
     </div>
