@@ -42,7 +42,7 @@ Route::get('/recipes', [RecipeController::class, 'index'])->name('recipes.index'
 Route::post('/mealplan', [MealPlanController::class, 'index'])->name('mealplan.index');
 
 Route::get('/mindfulness', [QuoteController::class, 'index'])->name('quotes.index');
-
+Route::post('/mindfulness',[QuoteController::class, 'store'])->name('images.store');
 
 
 //Basket routing
@@ -52,7 +52,8 @@ Route::get('/mealplan', [MealPlanController::class, 'index'])->name('mealplan');
 Route::post('/mealplan/add', [MealPlanController::class, 'add'])->name('mealplan.add');
 
 //Removing product from basket
-Route::post('/mealplan/remove', [MealPlanController::class, 'remove'])->name('mealplan.remove');
+Route::delete('/mealplan/{mealPlanID}', 'MealPlanController@remove')->name('mealplan.remove');
+
 
 //Checkout function
 Route::post('/mealplan/checkout', [MealPlanController::class, 'checkout'])->name('mealplan.checkout');

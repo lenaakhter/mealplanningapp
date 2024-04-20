@@ -8,38 +8,40 @@
 
 </div>
 
-<div>
-        <p>{{ $quote->text }}</p>
-        <p><strong>{{ $quote->author }}</strong></p>
-        <form action="{{ route('quotes.index') }}" method="GET">
-            <button type="submit">Show Another Quote</button>
-        </form>
-</div>
 
 <div class="bannerquote">
     <div class="bannercontents">
         <div class="bannertextquote">
-            <h1>Our greatest weakness lies in giving up. The most certain way to succeed is always to try just one more time.</h1>
+            <h1>"{{ $quote->text }}" ~ {{ $quote->author }}</h1>
+            
         </div>
         <div class="bannerbutton">
-            <a href="/">
-                <button>
-                    New Quote
-                </button>
-            </a>
+            <form action="{{ route('quotes.index') }}" method="GET">
+                <button type="submit">Show Another Quote</button>
+            </form>
         </div>
     </div>
 </div>
 
-<div class="mindcollage">
-    <div class="mimage" id="m1"></div>
-    <div class="mimage" id="m2"></div>
-    <div class="mimage" id="m3"></div>
-    <div class="mimage" id="m4"></div>
-    <div class="mimage" id="m5"></div>
-    <div class="mimage" id="m6"></div>
-    <div class="mimage" id="m7"></div>
-    <div class="mimage" id="m8"></div>
+
+<div class="collage">
+    <div class="container">
+        <div class="grid">
+            @foreach($images as $image)
+                <img src="{{ Storage::url($image->path) }}" alt="Photo">
+            @endforeach
+        </div>
+        <button id="refresh">Refresh</button>
+    </div>
+    <script>
+        document.getElementById('refresh').addEventListener('click', function() {
+            window.location.reload();
+        });
+    </script>
+    <script src="{{ asset('js/app.js') }}"></script>
 </div>
+
+
+
 
 @endsection

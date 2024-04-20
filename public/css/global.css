@@ -928,4 +928,31 @@ label{
     cursor: pointer;
     position: relative;
 }
+.container {
+    width: 100%; /* Take full width of the screen */
+    max-width: 960px; /* You can adjust this for the maximum width */
+    margin: auto; /* Center the container on the page */
+    padding-top: 50px; /* Add some padding at the top */
+}
 
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four images per row */
+    grid-gap: 10px;
+}
+
+.grid img {
+    width: 100%;
+    display: block;
+    object-fit: cover; /* This will make sure to cover the area without stretching the image */
+    aspect-ratio: 1; /* Keeping images square */
+}
+
+#refresh {
+    display: block;
+    width: 100px;
+    margin: 20px auto; /* Center the button horizontally */
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
