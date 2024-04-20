@@ -4,9 +4,10 @@
 
 
 <div class="bannertitle" id="welcometop">
-    <div class="bannercontents">
+<div class="bannercontents">
+    @auth
         <div class="bannertext">
-        <h1>Welcome back {{ Auth::user()->name }}, ready for your next meal?</h1>
+            <h1>Welcome back {{ Auth::user()->name }}, ready for your next meal?</h1>
         </div>
         <div class="bannerbutton">
             <a href="/mealplan">
@@ -15,7 +16,15 @@
                 </button>
             </a>
         </div>
-    </div>
+    @endauth
+
+    @guest
+        <div class="bannertext">
+            <h1>Recipes</h1>
+        </div>
+    @endguest
+</div>
+
 </div>
 
 <div class="recipetext">

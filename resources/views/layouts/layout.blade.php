@@ -37,7 +37,7 @@
         @if (Auth::check())
     <!-- Dropdown for logged-in users -->
     <div class="dropdown">
-        <a href="#" class="dropdown-link inline-flex items-center px-3 py-2 text-sm leading-4 font-medium text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150">
+        <a href="/dashboard" class="dropdown-link inline-flex items-center px-3 py-2 text-sm leading-4 font-medium text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150">
             {{ Auth::user()->name }}
           
         </a>
