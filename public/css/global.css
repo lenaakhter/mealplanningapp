@@ -929,3 +929,12 @@ label{
     position: relative;
 }
 
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.quote-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
