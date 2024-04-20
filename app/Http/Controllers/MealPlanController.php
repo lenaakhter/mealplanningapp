@@ -19,8 +19,7 @@ class MealPlanController extends Controller
         $query = DB::table('meal_plans')
             ->where('meal_plans.userID', '=', auth()->id())
             ->join('recipes', 'meal_plans.recipeID', '=', 'recipes.id')
-            // Add 'meal_plans.recipeID' to the select statement to explicitly fetch it
-            ->select('meal_plans.mealPlanID', 'meal_plans.dayOfWeek', 'meal_plans.mealtime', 'meal_plans.recipeID', 'recipes.*');
+            ->select('meal_plans.mealPlanID', 'meal_plans.dayOfWeek', 'recipes.*');
     
         if ($day) {
             $query->where('meal_plans.dayOfWeek', $day); // Filter by the day of the week if provided
@@ -33,7 +32,6 @@ class MealPlanController extends Controller
             'selectedDay' => $day,
         ]);
     }
-    
     
 
     // Function to add product to basket

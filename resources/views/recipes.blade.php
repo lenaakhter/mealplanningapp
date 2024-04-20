@@ -6,7 +6,7 @@
 <div class="bannertitle" id="welcometop">
     <div class="bannercontents">
         <div class="bannertext">
-            <h1>Welcome back {{ Auth::user()->name }}, ready for your next meal?</h1>
+            <h1>Welcome back [Name], ready for your next meal?</h1>
         </div>
         <div class="bannerbutton">
             <a href="/mealplan">

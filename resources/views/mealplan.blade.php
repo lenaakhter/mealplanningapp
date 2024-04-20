@@ -20,36 +20,16 @@
         </select>
     </form>
 
-    <div class="cardmeals">
-            <!-- Display meal plans -->
+    <!-- Display meal plans -->
     @if(count($mealplan) > 0)
-    @foreach($mealplan as $plan)
-    <a href="/recipe/{{$plan->recipeID}}">
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front" >
-                    <!-- Background Image -->
-                    <img src="{{$plan->coverimg}}" alt="Recipe Image" style="width: 100%; height: 100%; object-fit: cover; position: absolute; z-index: -1; border-radius: 1rem;">
-                    <p class="title">{{ $plan->title }}</p>
-                    <p>{{ $plan->dayOfWeek }}</p>
-                    <p>{{ $plan->mealtime }}</p>
-                </div>
-                <div class="flip-card-back">
-                    <!-- Optionally, add an image here too if needed -->
-                    <p class="title"></p>
-                    <p>Lets Cook</p>
-                </div>
+        @foreach($mealplan as $plan)
+        
+            <div>
+                <h3>{{ $plan->title }}</h3> <!-- Assuming 'name' is a column in 'recipes' -->
+                <p>{{ $plan->calories }}</p> <!-- Assuming 'description' is a column in 'recipes' -->
+                <p>Day: {{ $plan->dayOfWeek }}</p>
             </div>
-        </div>
-    </a>
-    
-
-
-    @endforeach
-
-    </div>
-
-
+        @endforeach
     @else
         <p>No meal plans found for this day.</p>
     @endif
