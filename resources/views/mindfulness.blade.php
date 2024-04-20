@@ -31,12 +31,6 @@
     </div>
 </div>
 
-<div class="photo-grid">
-    @foreach($images as $image)
-        <img src="{{ Storage::url($image->path) }}" alt="Photo">
-    @endforeach
-</div>
-
 <div class="mindcollage">
     <div class="mimage" id="m1"></div>
     <div class="mimage" id="m2"></div>
