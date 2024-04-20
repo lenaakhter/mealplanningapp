@@ -5,6 +5,7 @@ use App\Http\Controllers\RecipeController;
 use App\Http\Controllers\MealPlanController;
 use App\Http\Controllers\QuoteController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\RegisteredUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -56,6 +57,8 @@ Route::post('/mealplan/remove', [MealPlanController::class, 'remove'])->name('me
 //Checkout function
 Route::post('/mealplan/checkout', [MealPlanController::class, 'checkout'])->name('mealplan.checkout');
 
+// Check your registration route
+Route::post('/register', [RegisteredUserController::class, 'store'])->name('register');
 
 
 

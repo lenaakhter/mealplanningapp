@@ -94,10 +94,6 @@
         <option value="female">{{ __('Female') }}</option>
     </select>
 </div>
-
-  
-    
-    
     
                 <x-primary-button class="formbutton">
                     {{ __('Register') }}

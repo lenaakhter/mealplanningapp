@@ -33,7 +33,30 @@
             <a href="/mindfulness" id="navlink">Mindfulness</a>
         </div>
         <div class="regnav">
-            <a href="/login" id="navlink">Login/Signup</a>
+        @if (Auth::check())
+    <!-- Dropdown for logged-in users -->
+    <div class="dropdown">
+        <a href="#" class="dropdown-link inline-flex items-center px-3 py-2 text-sm leading-4 font-medium text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150">
+            {{ Auth::user()->name }}
+          
+        </a>
+        <div class="dropdown-content hidden absolute bg-white shadow-md">
+            <!-- Correct logout form setup -->
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <button type="submit" class="dropdown-item">
+                    {{ __('Log Out') }}
+                </button>
+            </form>
+        </div>
+    </div>
+@else
+    <!-- Direct link for visitors -->
+    <a href="{{ route('login') }}" class="inline-flex items-center px-3 py-2 text-sm leading-4 font-medium text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150">
+        Login / Register
+    </a>
+@endif
+
         </div>
 
     </div>
