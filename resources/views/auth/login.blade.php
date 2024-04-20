@@ -90,8 +90,8 @@
 <div>
     <label for="gender">{{ __('Sex') }}</label>
     <select id="gender" class="input" name="gender" required>
-        <option value="Male">{{ __('Male') }}</option>
-        <option value="Female">{{ __('Female') }}</option>
+        <option value="male">{{ __('Male') }}</option>
+        <option value="female">{{ __('Female') }}</option>
     </select>
 </div>
 
