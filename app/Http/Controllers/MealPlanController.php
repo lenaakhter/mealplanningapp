@@ -136,13 +136,18 @@ class MealPlanController extends Controller
     }
 
     //Removing product from basket
-    public function remove(Request $request, $mealPlanID)
-    {
-        error_log($request->mealPlanID);
-        MealPlan::where('mealPlanID', $request->mealPlanID)->delete();
-
-        return back()->with('success', 'Product removed from your basket.');
+    public function remove($mealPlanID)
+{
+    $mealPlan = MealPlan::find($mealPlanID);
+    if (!$mealPlan) {
+        return back()->with('error', 'Meal plan not found.');
     }
+
+    $mealPlan->delete();
+
+    return back()->with('success', 'Meal plan removed successfully.');
+}
+
 
     //Checkout function 
     public function checkout(Request $request)

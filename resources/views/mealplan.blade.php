@@ -21,38 +21,37 @@
     </form>
 
     <div class="cardmeals">
-            <!-- Display meal plans -->
     @if(count($mealplan) > 0)
-    @foreach($mealplan as $plan)
-    <a href="/recipe/{{$plan->recipeID}}">
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front" >
-                    <!-- Background Image -->
-                    <img src="{{$plan->coverimg}}" alt="Recipe Image" style="width: 100%; height: 100%; object-fit: cover; position: absolute; z-index: -1; border-radius: 1rem;">
-                    <p class="title">{{ $plan->title }}</p>
-                    <p>{{ $plan->dayOfWeek }}</p>
-                    <p>{{ $plan->mealtime }}</p>
-                </div>
-                <div class="flip-card-back">
-                    <!-- Optionally, add an image here too if needed -->
-                    <p class="title"></p>
-                    <p>Lets Cook</p>
+        @foreach($mealplan as $plan)
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="{{$plan->coverimg}}" alt="Recipe Image" style="width: 100%; height: 100%; object-fit: cover; position: absolute; z-index: -1; border-radius: 1rem;">
+                        <p class="title">{{ $plan->title }}</p>
+                        <p>{{ $plan->dayOfWeek }}</p>
+                        <p>{{ $plan->mealtime }}</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p class="title">{{ $plan->title }}</p>
+                        <p>Lets Cook</p>
+                        <!-- Remove Recipe Form -->
+                        <form action="{{ route('mealplan.remove', $plan->mealPlanID) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" onclick="return confirm('Are you sure you want to remove this meal plan?')">Remove Recipe</button>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-    </a>
-    
-
-
-    @endforeach
-
-    </div>
-
+        @endforeach
 
     @else
         <p>No meal plans found for this day.</p>
     @endif
+
+</div>
+
+
 
 
 </div>

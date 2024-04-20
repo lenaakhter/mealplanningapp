@@ -52,8 +52,7 @@ Route::get('/mealplan', [MealPlanController::class, 'index'])->name('mealplan');
 Route::post('/mealplan/add', [MealPlanController::class, 'add'])->name('mealplan.add');
 
 //Removing product from basket
-Route::delete('/mealplan/{mealPlanID}', 'MealPlanController@remove')->name('mealplan.remove');
-
+Route::delete('/mealplan/{mealPlanID}', [MealPlanController::class, 'remove'])->name('mealplan.remove');
 
 //Checkout function
 Route::post('/mealplan/checkout', [MealPlanController::class, 'checkout'])->name('mealplan.checkout');
