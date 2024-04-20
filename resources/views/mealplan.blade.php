@@ -20,6 +20,11 @@
         </select>
     </form>
 
+    <form action="{{ route('mealplan.clear') }}" method="POST" style="margin-top: 20px;">
+    @csrf
+    <button type="submit" onclick="return confirm('Are you sure you want to clear all meal plans?')">Clear Meal Plan</button>
+</form>
+
     <div class="cardmeals">
     @if(count($mealplan) > 0)
         @foreach($mealplan as $plan)
@@ -38,7 +43,7 @@
                         <form action="{{ route('mealplan.remove', $plan->mealPlanID) }}" method="POST">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" onclick="return confirm('Are you sure you want to remove this meal plan?')">Remove Recipe</button>
+                            <button type="submit" onclick="return confirm('Are you sure you want to remove this meal plan?')">Remove</button>
                         </form>
                     </div>
                 </div>
@@ -46,7 +51,7 @@
         @endforeach
 
     @else
-        <p>No meal plans found for this day.</p>
+        <p>No Recipes Found</p>
     @endif
 
 </div>

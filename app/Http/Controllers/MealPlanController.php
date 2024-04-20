@@ -191,6 +191,15 @@ class MealPlanController extends Controller
         }
     }
 
+    public function clearMealPlans()
+{
+    $userID = Auth::id();  // Get the authenticated user's ID
+    MealPlan::where('userID', $userID)->delete();  // Delete all meal plans for the user
+
+    return back()->with('success', 'All meal plans have been cleared.');
+}
+
+
 
 }
 
