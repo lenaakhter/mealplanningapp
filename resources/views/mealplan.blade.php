@@ -6,24 +6,27 @@
             <h1>My Meal Plan</h1>
         </div>
 
-        <!-- Day selection form -->
-        <form action="{{ route('mealplan.index') }}" method="GET">
-            <select name="day" onchange="this.form.submit()">
-                <option value="">Select a day</option>
-                <option value="Monday" {{ $selectedDay == 'Monday' ? 'selected' : '' }}>Monday</option>
-                <option value="Tuesday" {{ $selectedDay == 'Tuesday' ? 'selected' : '' }}>Tuesday</option>
-                <option value="Wednesday" {{ $selectedDay == 'Wednesday' ? 'selected' : '' }}>Wednesday</option>
-                <option value="Thursday" {{ $selectedDay == 'Thursday' ? 'selected' : '' }}>Thursday</option>
-                <option value="Friday" {{ $selectedDay == 'Friday' ? 'selected' : '' }}>Friday</option>
-                <option value="Saturday" {{ $selectedDay == 'Saturday' ? 'selected' : '' }}>Saturday</option>
-                <option value="Sunday" {{ $selectedDay == 'Sunday' ? 'selected' : '' }}>Sunday</option>
-            </select>
-        </form>
+        <div class="form-container">
+            <!-- Day selection form -->
+            <form action="{{ route('mealplan.index') }}" method="GET" class="day-select-form">
+                <select name="day" onchange="this.form.submit()" class="input1">
+                    <option value="">All Meals</option>
+                    <option value="Monday" {{ $selectedDay == 'Monday' ? 'selected' : '' }}>Monday</option>
+                    <option value="Tuesday" {{ $selectedDay == 'Tuesday' ? 'selected' : '' }}>Tuesday</option>
+                    <option value="Wednesday" {{ $selectedDay == 'Wednesday' ? 'selected' : '' }}>Wednesday</option>
+                    <option value="Thursday" {{ $selectedDay == 'Thursday' ? 'selected' : '' }}>Thursday</option>
+                    <option value="Friday" {{ $selectedDay == 'Friday' ? 'selected' : '' }}>Friday</option>
+                    <option value="Saturday" {{ $selectedDay == 'Saturday' ? 'selected' : '' }}>Saturday</option>
+                    <option value="Sunday" {{ $selectedDay == 'Sunday' ? 'selected' : '' }}>Sunday</option>
+                </select>
+            </form>
 
-        <form action="{{ route('mealplan.clear') }}" method="POST" style="margin-top: 20px;">
-            @csrf
-            <button type="submit" onclick="return confirm('Are you sure you want to clear all meal plans?')">Clear Meal Plan</button>
-        </form>
+            <!-- Clear Meal Plan Form -->
+            <form action="{{ route('mealplan.clear') }}" method="POST" class="clear-plan-form">
+                @csrf
+                <button type="submit" onclick="return confirm('Are you sure you want to clear all meal plans?')">Clear Meal Plan</button>
+            </form>
+        </div>
 
         <div class="cardmeals">
             @if(count($mealplan) > 0)

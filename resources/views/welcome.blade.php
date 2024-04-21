@@ -31,10 +31,21 @@
     </div>
 </div>
 
-<!-- <div class="test-img"> -->
-    <img src="/images/cookies.jpg" alt="image" width="24" height="35"></img>
-<!-- </div> -->
-
+<div class="bannerbottom">
+    <div class="bannercontents">
+        <div class="bannertext2">
+            <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h1>
+        </div>
+        <div class="bannerbutton">
+            <a href="/mealplan">
+                <button>
+                    Register Now
+                </button>
+            </a>
+        </div>
+    </div>
+</div>
 
 <div class="infobannerright">
     <div class="imageleft">
