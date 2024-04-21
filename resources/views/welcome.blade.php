@@ -2,6 +2,18 @@
 
 @section('content')
 
+
+<div class="video-background">
+    <video autoplay muted loop id="myVideo">
+        <source src="/fe-images/bakeryvideo.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+    <div class="vidtitle">Your Title Here</div>
+</div>
+
+
+
+
 <div class="bannertitle" id="welcometop">
     <div class="bannercontents">
         <div class="bannertext">
@@ -31,20 +43,12 @@
     </div>
 </div>
 
-<div class="bannerbottom">
-    <div class="bannercontents">
-        <div class="bannertext2">
-            <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h1>
-        </div>
-        <div class="bannerbutton">
-            <a href="/mealplan">
-                <button>
-                    Register Now
-                </button>
-            </a>
-        </div>
-    </div>
+<div class="video-background">
+    <video autoplay muted loop id="myVideo">
+        <source src="/fe-images/bakeryvideo.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+    <div class="vidtitle">Your Title Here</div>
 </div>
 
 <div class="infobannerright">

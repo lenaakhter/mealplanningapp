@@ -1123,3 +1123,28 @@ label{
     text-align: right; /* Aligns the clear button to the right */
     margin: 2rem;
 }
+
+
+.video-background {
+    position: relative;
+    height: 30rem; /* Full height */
+    overflow: hidden; /* Hide scrollbars */
+}
+
+#myVideo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+}
+
+.vidtitle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2em;
+    text-align: center;
+}
