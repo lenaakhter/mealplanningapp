@@ -1067,3 +1067,26 @@ label{
     grid-row-gap: 0px;
     margin-left: 2rem;
 }
+
+.guestpage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+.guestpage img{
+    height: 400px;
+}
+
+.guestpage button{
+    margin: 2rem;
+}
+
+.guestpage h1{
+    color: #7BB599;
+    font-size: 2rem;
+}
+

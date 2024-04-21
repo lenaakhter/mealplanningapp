@@ -54,8 +54,19 @@
             @endif
         </div>
     @else
-        <p>You need to be logged in to view this page.</p>
-
+    <div class="guestpage">
+        <div class="imageguest">
+            <img src="/fe-images/guestauth.png"></img>
+        </div>
+        <div class="textguest">
+            <h1>Please Log in to Access the Meal Plan Feature</h1>
+            <a href="/login">
+                <button>
+                    login
+                </button>
+            </a>
+        </div>
+    </div>
     @endauth
 @endsection
 
