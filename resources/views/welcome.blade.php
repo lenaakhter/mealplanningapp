@@ -3,16 +3,6 @@
 @section('content')
 
 
-<div class="video-background">
-    <video autoplay muted loop id="myVideo">
-        <source src="/fe-images/bakeryvideo.mp4" type="video/mp4">
-        Your browser does not support HTML5 video.
-    </video>
-    <div class="vidtitle">Your Title Here</div>
-</div>
-
-
-
 
 <div class="bannertitle" id="welcometop">
     <div class="bannercontents">
@@ -32,10 +22,7 @@
 <div class="infobannerleft">
     <div class="textleft">
         <h1>What we do?</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.</p>
+        <p>Calfoodie's aim is to take away this worry via self-produced meal plans, shopping lists and a wide library of recipes in one simple application. </p>
     </div>
     <div class="imageright">
         <br>
@@ -43,32 +30,21 @@
     </div>
 </div>
 
-<div class="video-background">
-    <video autoplay muted loop id="myVideo">
-        <source src="/fe-images/bakeryvideo.mp4" type="video/mp4">
-        Your browser does not support HTML5 video.
-    </video>
-    <div class="vidtitle">Your Title Here</div>
-</div>
 
 <div class="infobannerright">
     <div class="imageleft">
         <br>
     </div>
     <div class="textright">
-        <h1>What we do?</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.</p>
+        <h1>Importance of Diet</h1>
+        <p>Eating well isn't just about fueling the body; it's about celebrating life with every nutritious bite, ensuring we’re always ready to enjoy every moment to the fullest.</p>
     </div>
 </div>
 
 <div class="bannerbottom">
     <div class="bannercontents">
         <div class="bannertext2">
-            <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h1>
+            <h1>Interested in starting your own meal planning journey?</h1>
         </div>
         <div class="bannerbutton">
             <a href="/mealplan">

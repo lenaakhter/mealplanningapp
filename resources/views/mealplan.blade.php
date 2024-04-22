@@ -31,6 +31,7 @@
         <div class="cardmeals">
             @if(count($mealplan) > 0)
                 @foreach($mealplan as $plan)
+                <a href="/recipe/{{$plan->id}}">
                     <div class="flip-card">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
@@ -39,18 +40,22 @@
                                 <p>{{ $plan->dayOfWeek }}</p>
                                 <p>{{ $plan->mealtime }}</p>
                             </div>
+
                             <div class="flip-card-back">
                                 <p class="title">{{ $plan->title }}</p>
                                 <p>Lets Cook</p>
                                 <!-- Remove Recipe Form -->
+                                <br>
                                 <form action="{{ route('mealplan.remove', $plan->mealPlanID) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" onclick="return confirm('Are you sure you want to remove this meal plan?')">Remove</button>
                                 </form>
+
                             </div>
                         </div>
                     </div>
+                </a>
                 @endforeach
             @else
                 <p>No Recipes Found</p>

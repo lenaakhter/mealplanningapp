@@ -28,10 +28,7 @@
 </div>
 
 <div class="recipetext">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-          nisi ut aliquip ex ea commodo consequat</p>
+    <p>Here is our diverse range of delicious and nutritious recipes for you to explore! Whether you're looking for a quick weeknight dinner, a slow-cooked Sunday feast, or a refreshing smoothie, our collection has something to tantalize every taste bud. Dive into our carefully curated selections and find the perfect dishes to complement your culinary journey. Happy browsing!</p>
 </div>
 
 
@@ -68,18 +65,5 @@
 
 
 
-<div class="parallax">
-    <h1>Lorem ipsum dolor sit amet, </h1>
-  <h3>consectetur adipiscing elit, 
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</h3>
-</div>
-
-<div class="recipetext">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-          nisi ut aliquip ex ea commodo consequat</p>
-</div>
-<br>
 
 @endsection
